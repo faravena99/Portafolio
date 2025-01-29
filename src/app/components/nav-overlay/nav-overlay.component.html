@@ -1,0 +1,38 @@
+<button class="menu-toggle" [class.active]="isOpen" (click)="toggleMenu($event)">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<div class="nav-overlay" *ngIf="isOpen" [@overlayAnimation] (click)="$event.stopPropagation()">
+  <div class="overlay-content">
+    <div class="menu-items">
+      <div class="menu-item" *ngFor="let item of menuItems; let i = index"
+           [@itemAnimation]
+           (click)="scrollToSection(item.path)">
+        <i [class]="item.icon"></i>
+        <span class="item-label">{{ item.label }}</span>
+        <span class="item-number">0{{i + 1}}</span>
+      </div>
+      <div class="menu-item" [@itemAnimation] (click)="scrollToSection('latest-experience')">
+        <i class="bi bi-briefcase"></i>
+        <span class="item-label">Última Experiencia</span>
+        <span class="item-number">05</span>
+      </div>
+    </div>
+
+    <div class="overlay-footer" [@itemAnimation]>
+      <div class="social-links">
+        <a href="https://github.com/faravena99" target="_blank">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/felipe-alejandro-aravena-ponce-174430163/" target="_blank">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="mailto:felipe.aravena99@gmail.com">
+          <i class="bi bi-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

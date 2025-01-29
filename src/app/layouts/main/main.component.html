@@ -1,0 +1,49 @@
+<div class="landing-page">
+  <!-- Hero Section -->
+  <section id="welcome" class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <span class="welcome-tag">👋 Bienvenido a mi portafolio</span>
+        <h1 class="hero-title">
+          ¡Hola, soy <span class="highlight typewriter not-started" #typewriter></span>
+        </h1>
+        <p class="hero-description">
+          Desarrollador Frontend especializado en crear experiencias web modernas y atractivas
+          con Angular y tecnologías actuales.
+        </p>
+        <div class="hero-buttons">
+          <a href="/assets/CV.pdf" class="btn btn-primary" download>
+            <i class="fas fa-download me-2"></i>
+            Descargar CV
+          </a>
+          <a href="#projects" class="btn btn-outline">
+            <i class="fas fa-project-diagram me-2"></i>
+            Ver Proyectos
+          </a>
+        </div>
+        <app-about></app-about>
+        <app-tech-stack></app-tech-stack>
+      </div>
+    </div>
+    <div class="hero-shape"></div>
+  </section>
+
+  <!-- Latest Experience Section -->
+  <app-latest-experience></app-latest-experience>
+
+  <!-- Skills Section -->
+  <app-skills></app-skills>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio</span>
+        <h2 class="section-title">Mis Proyectos Destacados</h2>
+      </div>
+      <app-proyects></app-proyects>
+    </div>
+  </section>
+
+  <app-footer></app-footer>
+</div>

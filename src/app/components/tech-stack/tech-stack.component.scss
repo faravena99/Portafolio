@@ -1,0 +1,77 @@
+:host {
+  display: block;
+}
+
+.tech-stack {
+  margin-top: 2rem;
+
+  .tech-label {
+    display: block;
+    font-weight: 600;
+    color: var(--secondary-color, #2c3e50);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .tech-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .tech-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    i {
+      font-size: 2rem;
+      color: var(--secondary-color, #2c3e50);
+      transition: all 0.3s ease;
+    }
+
+    span {
+      font-size: 0.8rem;
+      color: var(--text-color, #6c757d);
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      i {
+        color: var(--primary-color, #3498db);
+        transform: translateY(-5px);
+      }
+
+      span {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-stack {
+    .tech-icons {
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+      gap: 1rem;
+    }
+
+    .tech-icon {
+      i {
+        font-size: 1.5rem;
+      }
+
+      span {
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

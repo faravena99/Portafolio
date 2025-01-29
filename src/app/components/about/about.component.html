@@ -1,0 +1,36 @@
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-content">
+      <div class="section-header">
+        <span class="section-tag">Sobre mí</span>
+        <h2 class="section-title">{{ personalInfo.name }}</h2>
+        <h3>{{ personalInfo.title }}</h3>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Soy un desarrollador frontend apasionado por crear interfaces
+            intuitivas y experiencias de usuario excepcionales, combinando
+            diseño atractivo con código limpio y eficiente. Con 5 años de
+            experiencia como Desarrollador Front End Senior, he trabajado en
+            la creación de aplicaciones de alto rendimiento para el sector
+            bancario, especializándome principalmente en Angular,
+            siempre enfocado en la optimización de la experiencia del usuario
+            y la implementación de prácticas de desarrollo ágiles.
+          </p>
+          <ul class="about-features">
+            <li *ngFor="let feature of features">
+              <i class="fas fa-check-circle"></i> {{ feature }}
+            </li>
+          </ul>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item" *ngFor="let stat of stats">
+            <span class="stat-number">{{ stat.number }}</span>
+            <span class="stat-label">{{ stat.label }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

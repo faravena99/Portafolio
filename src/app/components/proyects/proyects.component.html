@@ -1,0 +1,23 @@
+<section id="projects" class="section">
+  <div class="container">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let project of projects">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ project.title }}</h5>
+              <p class="card-text">{{ project.description }}</p>
+              <a [href]="project.link" class="btn btn-primary" target="_blank">
+                Ver Proyecto
+                <i class="fas fa-external-link-alt ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+</section>

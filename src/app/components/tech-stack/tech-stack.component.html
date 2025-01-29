@@ -1,0 +1,11 @@
+<div class="tech-stack">
+  <span class="tech-label">Stack Tecnológico:</span>
+  <div class="tech-icons">
+    <ng-container *ngFor="let tech of technologies">
+      <div class="tech-icon" [title]="tech.name">
+        <i [class]="tech.icon"></i>
+        <span>{{tech.name}}</span>
+      </div>
+    </ng-container>
+  </div>
+</div>
