@@ -4,8 +4,8 @@ interface TechItem {
   name: string;
   icon: string;
   category: 'frontend' | 'backend' | 'tools';
+  isSvg?: boolean;
 }
-
 @Component({
   selector: 'app-tech-stack',
   templateUrl: './tech-stack.component.html',
@@ -13,16 +13,18 @@ interface TechItem {
 })
 export class TechStackComponent {
   technologies: TechItem[] = [
-    { name: 'Angular', icon: 'bi bi-code-slash', category: 'frontend' },
-    { name: 'TypeScript', icon: 'bi bi-braces', category: 'frontend' },
-    { name: 'Redux', icon: 'bi bi-diagram-3', category: 'frontend' },
-    { name: 'RxJS', icon: 'bi bi-infinity', category: 'frontend' },
-    { name: 'Node.js', icon: 'bi bi-server', category: 'backend' },
-    { name: 'SQL', icon: 'bi bi-database', category: 'backend' },
-    { name: 'Postman', icon: 'bi bi-send', category: 'tools' },
-    { name: 'HTML5', icon: 'bi bi-file-earmark-code', category: 'frontend' },
-    { name: 'CSS3', icon: 'bi bi-brush', category: 'frontend' },
-    { name: 'Bootstrap', icon: 'bi bi-bootstrap', category: 'frontend' }
+    { name: 'Angular', icon: 'devicon-angularjs-plain', category: 'frontend' },
+    { name: 'TypeScript', icon: 'devicon-typescript-plain', category: 'frontend' },
+    { name: 'Jasmine', icon: 'devicon-jasmine-plain', category: 'frontend' },
+    { name: 'Redux', icon: 'devicon-redux-original', category: 'frontend' },
+    { name: 'RxJS', icon: 'devicon-react-original', category: 'frontend' },
+    { name: 'Node.js', icon: 'devicon-nodejs-plain', category: 'backend' },
+    { name: 'SQL', icon: 'devicon-mysql-plain', category: 'backend' },
+    { name: 'Postman', icon: 'devicon-postman-plain', category: 'tools' },
+    { name: 'HTML5', icon: 'devicon-html5-plain', category: 'frontend' },
+    { name: 'CSS3', icon: 'devicon-css3-plain', category: 'frontend' },
+    { name: 'Bootstrap', icon: 'devicon-bootstrap-plain', category: 'frontend' },
+    { name: 'Git', icon: 'devicon-git-plain', category: 'frontend' }
   ];
 
   get frontendTech() {

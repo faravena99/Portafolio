@@ -4,8 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MainModule } from './layouts/main/main.module';
 import { NavOverlayModule } from './components/nav-overlay/nav-overlay.module';
+import { MainModule } from './layouts/main/main.module';
 
 @NgModule({
   declarations: [

@@ -1,5 +1,7 @@
+@import 'src/styles.scss';
+
 .section {
-  padding: 100px 0;
+  @include section-padding;
 }
 
 .bg-primary {
@@ -62,7 +64,7 @@ app-footer {
 }
 
 app-footer a {
-  color: #007bff; /* Azul para enlaces */
+  color: $primary-color; /* Azul para enlaces */
   text-decoration: none;
   font-weight: bold;
 }
@@ -70,13 +72,6 @@ app-footer a {
 app-footer a:hover {
   text-decoration: underline;
 }
-
-// Variables
-$primary-color: #3498db;
-$secondary-color: #2c3e50;
-$text-color: #2c3e50;
-$light-bg: #f8f9fa;
-$gradient: linear-gradient(135deg, $primary-color, $secondary-color);
 
 // Mixins
 @mixin section-padding {
@@ -91,16 +86,6 @@ $gradient: linear-gradient(135deg, $primary-color, $secondary-color);
   color: $text-color;
 }
 
-.section-tag {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background: rgba($primary-color, 0.1);
-  color: $primary-color;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
 
 .section-title {
   font-size: 2.5rem;
@@ -111,7 +96,6 @@ $gradient: linear-gradient(135deg, $primary-color, $secondary-color);
 
 // Hero Section
 .hero-section {
-  @include section-padding;
   position: relative;
   background: white;
   overflow: hidden;
@@ -120,10 +104,6 @@ $gradient: linear-gradient(135deg, $primary-color, $secondary-color);
     max-width: 800px;
     position: relative;
     z-index: 1;
-  }
-
-  .welcome-tag {
-    @extend .section-tag;
   }
 
   .hero-title {
@@ -428,6 +408,22 @@ $gradient: linear-gradient(135deg, $primary-color, $secondary-color);
     .hero-description {
       font-size: 1rem;
     }
+  }
+}
+
+.typewriter .cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: $primary-color;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
   }
 }
 

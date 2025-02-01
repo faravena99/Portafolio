@@ -83,7 +83,13 @@
         font-weight: 500;
 
         i {
-          color: var(--primary-color, #3498db);
+          font-size: 1.5rem;
+          color: #3498db;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #2c3e50;
+          }
         }
       }
     }
@@ -162,5 +168,22 @@
 @media (max-width: 768px) {
   .about-section {
     padding: 4rem 0;
+  }
+}
+
+.about-icons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+
+  i {
+    font-size: 3rem;
+    color: #6c757d;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #3498db;
+    }
   }
 }

@@ -44,15 +44,9 @@ export class NavOverlayComponent {
     { path: 'welcome', label: 'Inicio', icon: 'bi bi-house-door' },
     { path: 'about', label: 'Sobre mí', icon: 'bi bi-person' },
     { path: 'projects', label: 'Proyectos', icon: 'bi bi-code-square' },
+    { path: 'latest-experience', label: 'Última Experiencia', icon: 'bi bi-briefcase' },
     { path: 'contact', label: 'Contacto', icon: 'bi bi-envelope' }
   ];
-
-  latestExperience: Experience = {
-    title: 'Frontend Developer',
-    company: '2Brains',
-    period: 'Marzo 2023 - Actualidad',
-    location: 'Santiago, Chile'
-  };
 
   constructor(private elementRef: ElementRef) {}
 

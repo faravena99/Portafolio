@@ -6,13 +6,12 @@ Swiper.use([Navigation, Pagination, Autoplay]);
 @Component({
   selector: 'app-proyects',
   templateUrl: './proyects.component.html',
-  styleUrls: ['./proyects.component.scss']
+  styleUrls: ['./proyects.component.scss'],
 })
 export class ProyectsComponent implements OnInit {
   projects: any = [];
 
   constructor(private http: HttpClient) {}
-
 
   ngOnInit(): void {
     this.fetchProjects();
@@ -20,7 +19,7 @@ export class ProyectsComponent implements OnInit {
 
   initializeSwiper() {
     setTimeout(() => {
-      const swiper = new Swiper('.swiper-container', {
+      new Swiper('.swiper-container', {
         effect: 'slide',
         slidesPerView: 1,
         spaceBetween: 30,
@@ -58,17 +57,16 @@ export class ProyectsComponent implements OnInit {
   }
 
   fetchProjects() {
-    const username = 'faravena99'; // Cambia por tu nombre de usuario de GitHub
+    const username = 'faravena99';
     this.http
       .get<any[]>(`https://api.github.com/users/${username}/repos`)
       .subscribe((repos) => {
         this.projects = repos.map((repo) => ({
           title: repo.name,
           description: repo.description || 'Sin descripción',
-          link: repo.html_url
+          link: repo.html_url,
         }));
         this.initializeSwiper(); // Inicializa el swiper después de cargar los proyectos
       });
   }
 }
-

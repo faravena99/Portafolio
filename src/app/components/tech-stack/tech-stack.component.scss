@@ -1,10 +1,19 @@
+.svg-icon {
+  width: 32px;
+  height: 32px;
+  transition: all 0.3s ease;
+  image-rendering: crisp-edges;
+  shape-rendering: geometricPrecision;
+  fill: var(--secondary-color, #2c3e50); // Color inicial
+}
+
 :host {
   display: block;
 }
 
 .tech-stack {
   margin-top: 2rem;
-
+  margin-bottom: 6rem;
   .tech-label {
     display: block;
     font-weight: 600;
@@ -24,34 +33,28 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
 
     i {
-      font-size: 2rem;
-      color: var(--secondary-color, #2c3e50);
-      transition: all 0.3s ease;
+      font-size: 3rem;
+      transition: color 0.3s ease;
     }
 
     span {
-      font-size: 0.8rem;
-      color: var(--text-color, #6c757d);
-      font-weight: 500;
-      opacity: 0;
-      transform: translateY(-5px);
-      transition: all 0.3s ease;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #6c757d;
+      transition: color 0.3s ease;
     }
 
     &:hover {
+      transform: scale(1.1);
       i {
-        color: var(--primary-color, #3498db);
-        transform: translateY(-5px);
+        color: #3498db; // Cambia el color del icono al pasar el ratón
       }
-
       span {
-        opacity: 1;
-        transform: translateY(0);
+        color: #3498db; // Cambia el color del texto al pasar el ratón
       }
     }
   }
@@ -74,4 +77,8 @@
       }
     }
   }
+}
+
+.tech-icon:hover .svg-icon {
+  fill: var(--primary-color, #3498db); // Cambia el color al pasar el ratón
 }

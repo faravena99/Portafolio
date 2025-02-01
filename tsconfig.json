@@ -16,7 +16,7 @@
     "importHelpers": true,
     "useDefineForClassFields": false,
     "allowSyntheticDefaultImports": true,
-    "target": "es5",
+    "target": "ES2022",
     "module": "esnext",
     "strict": true,
     "skipLibCheck": true,
